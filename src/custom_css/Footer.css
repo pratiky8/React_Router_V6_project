@@ -1,0 +1,45 @@
+/* ========================
+   Footer Styles
+======================== */
+.footer {
+  background-color: #03172b; /* dark blue */
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: auto; /* ensures footer stays at bottom */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.active{
+  color:#ffeb3b
+}
+
+.footer-text {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #eff1f2;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #ffeb3b; /* yellow links */
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}

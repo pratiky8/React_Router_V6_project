@@ -1,0 +1,153 @@
+/* Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* ========================
+   Header Section
+======================== */
+.section-navbar {
+  background-color: #03172b;
+  color: #fff;
+  width: 100%;
+  position: sticky; /* sticks on scroll */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+/* Active nav link */
+.navbar .nav-link.active {
+  color: #ffeb3b; /* yellow highlight */
+  border-bottom: 2px solid #ffeb3b; /* underline effect */
+}
+
+
+/* 🔹 Top bar */
+.top_txt {
+  background: linear-gradient(90deg, #041c38, #052b52);
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.top_txt .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.head_txt p {
+  margin: 0;
+  color: #e0e7ef;
+  letter-spacing: 0.5px;
+}
+
+.sing_in_up a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.sing_in_up a:hover {
+  color: #ffeb3b;
+}
+
+/* 🔹 Navbar container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+}
+
+/* Logo / Brand */
+.navbar-brand p {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 1px;
+  background: linear-gradient(45deg, #ffeb3b, #f57c00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand p:hover {
+  transform: scale(1.1);
+}
+
+/* 🔹 Navbar links */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .nav-item {
+  margin-left: 25px;
+  position: relative;
+}
+
+.navbar .nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 6px 0;
+  transition: color 0.3s ease;
+}
+
+/* 🔹 Animated underline effect */
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: #ffeb3b;
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #ffeb3b;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none; /* hide menu initially */
+    flex-direction: column;
+    background: #041c38;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
+
+  .navbar .nav-item {
+    margin: 10px 0;
+  }
+}

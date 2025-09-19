@@ -1,0 +1,64 @@
+/* Card container */
+.hero-container {
+  list-style: none;
+  display: inline-block;
+  margin: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Main card layout */
+.main-container {
+  background: #1c1c1c;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 220px;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+/* Poster */
+.poster-container {
+  width: 100%;
+  height: 330px;
+  overflow: hidden;
+}
+
+.poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom: 2px solid #333;
+  transition: transform 0.3s ease;
+}
+
+.poster:hover {
+  transform: scale(1.1);
+}
+
+/* Ticket section */
+.ticket-container {
+  padding: 12px;
+}
+
+/* Button */
+.ticket_buy-btn {
+  background: #ff4757;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.ticket_buy-btn:hover {
+  background: #e84118;
+}

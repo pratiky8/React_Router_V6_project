@@ -1,0 +1,94 @@
+/* ========================
+   App Layout
+======================== */
+.App {
+  min-height: 100vh;        /* full height screen */
+  display: flex;
+  flex-direction: column;   /* stack header → content → footer */
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* ========================
+   Main Content
+======================== */
+.main-content {
+  flex: 1;                  /* take available space */
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #03172b;
+  margin-bottom: 20px;
+  border-left: 4px solid #ffeb3b;
+  padding-left: 10px;
+}
+
+/* ========================
+   Utility Classes
+======================== */
+.text-center {
+  text-align: center;
+}
+
+.mt-2 { margin-top: 20px; }
+.mt-4 { margin-top: 40px; }
+
+/*========================*/
+/* Container for centering loader */
+.loader-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* almost full screen */
+  background: #1e1e2f; /* dark background */
+}
+
+/* The loader circles */
+.loader {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+/* Outer circle */
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 8px solid transparent;
+  border-top-color: #ff6b6b; /* pink */
+  border-bottom-color: #4ecdc4; /* teal */
+  animation: spin 1.2s linear infinite;
+}
+
+/* Inner circle spins opposite direction */
+.loader::after {
+  border-top-color: #f7b731;
+  border-bottom-color: #1e90ff;
+  width: 50px;
+  height: 50px;
+  top: 15px;
+  left: 15px;
+  animation-direction: reverse;
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
